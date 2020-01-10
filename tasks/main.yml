@@ -7,11 +7,3 @@
   until: basetools_install_basetools is succeeded
   retries: 3
 
-- name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Ensure Supplemental base packages are installed"
-  package:
-    name: "{{ supplemental_basetools_packages }}"
-    state: present
-  register: _supplementalbasetools_install_basetools
-  until: supplemental_basetools_install_basetools is succeeded
-  retries: 3
-  when: supplemental_basetools_packages is defined
