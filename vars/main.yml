@@ -1,0 +1,66 @@
+---
+# vars file for buildroot
+_basetools_packages:
+  default:
+    - ntpdate
+    - curl
+    - wget
+    - jq
+    - git
+  Alpine:
+    - net-tools
+    - curl
+    - wget
+    - jq
+    - git
+  Debian:
+    - net-tools
+    - apt-transport-https
+    - ntpdate
+    - curl
+    - wget
+    - jq
+    - git
+    - dstat
+    - strace
+    - powertop
+    - i7z
+    - iperf
+    - pcstat
+    - gnupg2
+  CentOS-7:
+    - net-tools
+    - ntpdate
+    - curl
+    - wget
+    - jq
+    - git
+  CentOS:
+    - net-tools
+    - ntpdate
+    - curl
+    - wget
+    - jq
+    - git
+    - dstat
+    - strace
+    - powertop
+    - i7z
+    - iperf
+    - pcstat
+  RedHat:
+    - net-tools
+    - ntpdate
+    - curl
+    - wget
+    - jq
+    - git
+    - dstat
+    - strace
+    - powertop
+    - i7z
+    - iperf
+    - pcstat
+
+basetools_packages: "{{ _basetools_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_basetools_packages[ansible_distribution] | default(_basetools_packages[ansible_os_family] | default (_basetools_packages['default']))) }}"
+
