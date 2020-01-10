@@ -26,7 +26,7 @@ _basetools_packages:
     - powertop
     - i7z
     - iperf
-    - pcstat
+#    - pcstat
     - gnupg2
   CentOS-7:
     - net-tools
