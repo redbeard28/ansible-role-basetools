@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Jeremie CUADRADO
-  role_name: ansible-role-basetools
+  role_name: basetools
   description: Ansible role install some base packages.
   license: GPLv3
   company: REDBEARD-CONSULTING
