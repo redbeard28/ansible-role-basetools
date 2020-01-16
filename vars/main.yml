@@ -7,6 +7,7 @@ _basetools_packages:
     - wget
     - jq
     - git
+    - unzip
   Alpine:
     - net-tools
     - curl
@@ -15,6 +16,8 @@ _basetools_packages:
     - git
   Debian:
     - net-tools
+    - unzip
+    - gzip
     - apt-transport-https
     - ntpdate
     - curl
@@ -31,6 +34,8 @@ _basetools_packages:
   CentOS-7:
     - net-tools
     - ntpdate
+    - gzip
+    - unzip
     - curl
     - wget
     - jq

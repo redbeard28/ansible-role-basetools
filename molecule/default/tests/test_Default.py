@@ -8,9 +8,16 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 @pytest.mark.parametrize('pkg', [
     'python3',
-    'ntpdate'
+    'ntpdate',
+    'net-tools',
+    'ntpdate',
+    'gzip',
+    'unzip',
+    'curl',
+    'wget',
+    'jq',
+    'git'
 ])
 def test_pkg(host, pkg):
     package = host.package(pkg)
-
     assert package.is_installed
