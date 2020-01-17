@@ -6,4 +6,3 @@
   register: basetools_install_basetools
   until: basetools_install_basetools is succeeded
   retries: 3
-

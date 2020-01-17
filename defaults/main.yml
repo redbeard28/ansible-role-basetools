@@ -31,4 +31,3 @@ _supplemental_basetools_packages:
     - git
 
 supplemental_basetools_packages: "{{ _supplemental_basetools_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_supplemental_basetools_packages[ansible_distribution] | default(_supplemental_basetools_packages[ansible_os_family] | default (_supplemental_basetools_packages['default']))) }}"
-

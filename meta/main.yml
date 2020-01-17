@@ -13,13 +13,16 @@ galaxy_info:
         - all
     - name: CentOS
       versions:
-        - 6
-        - 7
+        - all
     - name: RedHat
       versions:
-        - 6
-        - 7
+        - all
 
-  galaxy_tags: []
+  galaxy_tags:
+    - server
+    - system
+    - web
+    - cloud
 
-  dependencies: []
+  dependencies:
+    - src: redbeard28.bootstrap
